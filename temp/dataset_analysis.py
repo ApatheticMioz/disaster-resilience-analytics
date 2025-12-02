@@ -22,7 +22,7 @@ print("=" * 80)
 print("GLOBAL DISASTER RESILIENCE ANALYTICS - DATASET ANALYSIS")
 print("=" * 80)
 
-df = pd.read_csv(r"D:\Work\Semester5\DAV\Project\Data\unified_resilience_dataset.csv")
+df = pd.read_csv(r"Data\unified_resilience_dataset.csv")
 
 print(f"\n📊 DATASET OVERVIEW")
 print("-" * 40)
