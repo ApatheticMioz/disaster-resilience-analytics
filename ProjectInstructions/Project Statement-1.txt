@@ -1,0 +1,751 @@
+National
+
+University of Computer
+
+and Emerging Sciences
+
+(FAST-NUCES)
+
+Department of Data Science
+Data
+
+1
+
+Analysis
+
+and Visualization
+
+Semester
+
+Project
+
+Groups
+e Each
+
+group
+
+must
+
+contain
+
+exactly
+
+2 students.
+
+No solo submissions
+
+and
+
+no
+
+groups larger than two will be accepted.
+e Register your group members on the google sheet before submission.
+
+2
+
+Deadline
+e Final submission deadline:
+
+30 November
+
+2025 at 11:59 PM.
+
+e Submissions must be uploaded to the course Google classroom by the above dead-
+
+line.
+
+3
+
+Report
+
+Submission
+
+The PDF
+
+report should include:
+
+e The report should be in IEEE
+e Title, group members,
+
+standard format.
+
+and a one-paragraph abstract.
+
+e Problem statement and objectives.
+e Data sources and preprocessing steps.
+
+e Methods and implementation details (algorithms, visualization tools, libraries).
+e Key results, visualizations, and interpretation.
+
+e Limitations and future work.
+e Appendix with additional plots, tables, or code snippets.
+
+e List of references( if used any)
+
+4
+
+Late Policy
+e Late
+
+submissions
+
+e If you
+
+anticipate
+
+will not
+
+problems
+
+deadline with evidence.
+
+5
+
+Plagiarism
+
+be accepted.
+before
+
+the deadline,
+
+contact
+
+the instructor
+
+before
+
+the
+
+Last-minute requests will generally not be accepted.
+
+Policy
+
+Plagiarism
+
+or copying
+
+prohibited
+
+and
+
+will
+
+from
+
+result
+
+other
+in
+
+groups
+
+disciplinary
+
+(or online
+
+sources)
+
+is strictly
+
+action.
+
+Cite
+
+any external
+
+code,
+
+of the work
+
+were
+
+written
+
+by which
+
+similarity
+
+checks
+
+on
+
+libraries, or examples you use.
+e Each
+
+group
+
+must
+
+clearly
+
+state
+
+which
+
+parts
+
+the
+
+right
+
+to run
+
+member in authors.txt.
+The
+
+instructor
+
+reserves
+
+code
+
+sub-
+
+missions.
+e Use of public libraries and example code is allowed, but you must:
+
+(a) Clearly cite the source in the report.
+(b) Indicate exactly which files/sections are reused or adapted.
+(c) Ensure final submission is coherent and all members understand and can explain the work.
+
+6
+
+Final
+
+Notes
+
+e Remember:
+
+Groups
+
+line is 30 November
+
+must
+
+be exactly 2 people,
+
+2025, 11:59 PM
+
+and the submission
+
+(Asia/Karachi).
+
+e Keep backups of your code and final submission.
+
+Good luck!
+
+dead-
+
+Resilience
+
+Under
+
+Pressure:
+
+A Data-Driven Framework for Global Disaster Risk, Response,
+Recovery Analytics
+
+and
+
+Scenario
+In recent
+
+decades,
+
+the world
+
+has faced a rising wave
+
+man-made
+
+disas-
+
+ters from catastrophic floods and wildfires to pandemics
+
+and industrial accidents.
+
+Each
+
+disaster exposes
+
+governance
+
+deep vulnerabilities
+
+in human
+
+of natural
+
+systems:
+
+and
+
+failures,
+
+economic
+
+fragility, unequal recovery, and infrastructure weaknesses.
+To move
+
+beyond reactive response,
+
+global organizations are turning to data intelligence
+
+systems that can integrate historical data, socio-economic indicators, and environmental
+information to reveal how societies prepare for, absorb, and recover from disasters.
+
+The Global Disaster and Humanitarian
+
+Response
+
+missioned your team
+
+to design a prototype
+
+capable
+
+(Pivotal Data
+
+of quantifying
+
+and visualizing
+
+system will help decision-makers
+they recover, and what
+However,
+
+GDHRA
+
+Systems)
+
+at national
+
+(GDHRA)
+
+and
+
+has com-
+
+analytical platform
+
+regional
+
+scales.
+
+identify which countries are most vulnerable,
+
+This
+
+how fast
+
+socio-economic or environmental factors drive that recovery.
+
+provides
+
+publicly available data.
+
+resilience
+
+Agency
+
+no fixed formulas
+
+or dashboards,
+
+It is your job to define what
+
+only large, unstructured,
+
+“resilience” means computationally,
+
+model it quantitatively, and tell the story visually through Tableau.
+
+Analytical
+
+Context
+
+Disaster
+
+is multi-dimensional
+
+Your
+
+resilience
+
+it cannot
+
+be
+
+directly
+
+measured,
+
+task is to build derived indicators using data-driven reasoning.
+
+only
+
+inferred.
+
+Combine
+
+datasets
+
+across multiple domains and develop your own computational representation of:
+e Disaster
+
+Exposure
+
+e Vulnerability
+
+(E): Frequency and severity of disasters in a region.
+
+(V): Human
+
+e Adaptive Capacity
+
+and economic losses relative to population or GDP.
+
+(A): Socio-economic and institutional strength for recovery.
+
+You are expected to construct and justify quantitative indices using such relationships.
+
+1. Disaster Impact Index (DII)
+DIT _ (F+4A)
+GDP,.
+‘Where:
+
+xS
+
+(1)
+
+e [ = fatalities per million people per year
+
+o A,
+
+= affected population (% of total population)
+
+e GDP,.
+
+= GDP
+
+per capita
+
+e S = severity weight
+
+(based on disaster type)
+
+This metric may represent how disruptive disasters are relative to a country’s wealth and
+
+size.
+
+2. Resilience Recovery Score (RRS)
+
+RRS = GD Pyrowthyos — GDPygrowth,. 4 HDI + Govipgea
+Trecovery
+
+@2
+
+2
+
+‘Where:
+® GDPyrowtny,,;
+
+= GDP
+
+growth
+
+rate after disaster years
+
+0 GDPgmme
+
+= GDP
+
+growth
+
+rate before
+
+disaster
+
+® Tecovery = years to reach pre-disaster output
+e HDI
+
+= Human
+
+Development
+
+Index
+
+Govipge; = governance or institutional stability score
+
+3. Composite Resilience Index (CRI)
+A
+ORI = 5+
+
+.
+(3)
+
+‘Where:
+e A = adaptive capacity (e.g., infrastructure, literacy, health)
+e E = exposure
+
+(disaster frequency
+
+x intensity)
+
+e V = vulnerability (impact per capita or GDP)
+Higher
+
+C'RI
+
+indicates
+
+greater
+
+resilience,
+
+the ability to sustain
+
+or recover
+
+quickly
+
+from
+
+disaster events.
+Note:
+
+These are conceptual models.
+
+You are encouraged to modify or expand them by
+
+integrating other variables such as COy emissions, urban density, aid flows, or inequality
+
+indices.
+
+Computational
+R1.
+
+Data Fusion:
+
+e EM-DAT
+
+and Analytical Requirements
+
+Integrate at least three open datasets.
+
+Disaster Database:
+
+e World Bank Data:
+
+Possible sources include:
+
+https://www.emdat.be/
+
+https://data.worldbank.org/
+
+e UNDP
+
+Human
+
+Development
+
+e NASA
+
+Earth Data (Climate):
+
+Reports:
+
+https://hdr.undp.org/data-center
+
+https://earthdata.nasa.gov/
+
+e Our World in Data: https://ourworldindata.org/natural-disasters
+Align datasets on country—year pairs.
+R2.
+
+Feature
+
+Engineering:
+
+Handle missing values analytically.
+
+Derive variables such as:
+
+e Annualized disaster frequency (per country)
+e Average economic loss per event (normalized by GDP)
+e Recovery rate (based on GDP
+
+rebound)
+
+o Infrastructure exposure (urbanization x hazard intensity)
+e Human
+R3.
+
+Model
+
+cost ratio (fatalities per 100k population)
+
+Formulation:
+
+your own)
+
+Implement
+
+using appropriate
+
+one or more
+
+formulae.
+
+Clearly
+
+derived indices (DII, RRS,
+
+CRI,
+
+or
+
+explain the mathematical
+
+logic and
+
+justification.
+R4.
+
+Comparative
+
+Analysis:
+
+Your Tableau dashboard must enable exploration across:
+
+e Time (temporal evolution of resilience)
+e Geography
+
+(cross-country or regional comparison)
+
+e Disaster types (earthquake, flood, drought, etc.)
+e Socio-economic groups (developed vs developing countries)
+R5.
+
+Analytical
+
+Storytelling:
+
+Insights must
+
+emerge
+
+visually.
+
+Your
+
+dashboard
+
+should
+
+help answer questions like:
+e Which nations show high exposure but low vulnerability?
+e Do wealthier nations recover faster, or does governance matter more?
+e How
+
+does resilience evolve alongside climate risk?
+
+Visualization and Design
+
+Requirements
+
+You must independently determine which visualization types best represent your analysis.
+Each visual choice should reflect analytical intent, not just aesthetics.
+Suggested elements:
+e Geo-maps for risk and resilience gradients.
+e Time-series plots for resilience evolution.
+
+e Scatter or bubble plots showing relationships (e.g., GDP
+e Treemaps
+
+vs. RRS).
+
+or Sankey diagrams to depict flow of impact or aid.
+
+e Interactive filters by region, year, or disaster type.
+Your
+
+final dashboard
+
+should
+
+consist
+
+of at least three
+
+analytical
+
+views
+
+and
+
+feel ex-
+
+ploratory, not static.
+
+Deliverables
+1. Interactive Tableau Dashboard:
+e Multi-view and interactive with meaningful interrelations.
+
+o Derived metrics and documented formulas.
+e Insightful and well-labeled design.
+
+2. Technical Report
+e Refer to Report
+
+(6-8 pages):
+Submission
+
+guild lines.
+
+e Datasets used, preprocessing methods,
+e Computed
+
+and data transformations.
+
+formulas and analytical rationale.
+
+e Justification of visualization choices and insights.
+
+3. Dataset
+
+Documentation
+
+e Dataset names,
+
+URLs,
+
+Sheet:
+and sample structures.
+
+e Description of derived or cleaned attributes.
+
+Learning
+
+Outcomes
+
+The project must satisify these outcomes:
+e Apply data fusion and feature engineering techniques on large public datasets.
+e Construct
+
+and reason about computational models using real data.
+
+e Translate analytical insights into effective visualization narratives.
+Demonstrate
+
+analytical autonomy
+
+and creative problem-solving.
+
+e Produce professional, interactive dashboards for complex societal phenomena.
+
+Department of Data Science, FAST-NUCES
+
+(Fall 2025)
+
+
