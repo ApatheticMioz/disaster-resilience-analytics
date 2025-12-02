@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 # Load the unified dataset for analysis
-df = pd.read_csv(r"D:\Work\Semester5\DAV\Project\Data\unified_resilience_dataset.csv")
+df = pd.read_csv(r"Data\unified_resilience_dataset.csv")
 
 print("=" * 90)
 print("VISUALIZATION TECHNIQUE EVALUATION FOR TABLEAU PUBLIC")
