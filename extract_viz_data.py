@@ -90,7 +90,6 @@ def save_to_csv(entries, output_path):
         # Write header - 4 columns as requested
         writer.writerow([
             'ID',           # Auto-incrementing number
-            'Author',       # Author names
             'Title',        # Paper title
             'Abstract'      # Paper abstract
         ])
@@ -99,7 +98,6 @@ def save_to_csv(entries, output_path):
         for idx, entry in enumerate(entries, start=1):
             writer.writerow([
                 idx,
-                entry['author'],
                 entry['title'],
                 entry['abstract']
             ])
@@ -203,7 +201,7 @@ def main():
     save_to_csv(entries, output_csv)
     
     # Save to formatted text file
-    save_to_txt(entries, output_txt)
+    # save_to_txt(entries, output_txt)
     
     # Print statistics
     print_statistics(entries)
