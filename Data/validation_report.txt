@@ -1,0 +1,135 @@
+======================================================================
+UNIFIED RESILIENCE DATASET - VALIDATION REPORT
+Generated: 2025-12-02 07:21:59
+======================================================================
+
+
+1. DATASET OVERVIEW
+--------------------------------------------------
+Total rows: 4608
+Total columns: 40
+Countries: 192
+Year range: 2000 - 2023
+
+
+2. SOURCE DATA ROW COUNTS
+--------------------------------------------------
+Note: 'Before merge' counts are from individual source processing
+      'After merge' counts show how many rows have data for each source
+
+ND-GAIN:
+  Rows with data: 4608
+  Countries with data: 192
+
+Nighttime Lights:
+  Rows with data: 4091
+  Countries with data: 192
+
+GDACS:
+  Rows with data: 1821
+  Countries with data: 168
+
+IMF WEO:
+  Rows with data: 4498
+  Countries with data: 189
+
+World Bank WDI:
+  Rows with data: 4608
+  Countries with data: 192
+
+HDR:
+  Rows with data: 4426
+  Countries with data: 190
+
+WGI:
+  Rows with data: 4324
+  Countries with data: 188
+
+INFORM Risk:
+  Rows with data: 1512
+  Countries with data: 189
+
+FTS:
+  Rows with data: 176
+  Countries with data: 89
+
+DesInventar:
+  Rows with data: 1237
+  Countries with data: 80
+
+
+3. COUNTRY COVERAGE BY SOURCE
+--------------------------------------------------
+Countries in final dataset: 192
+
+
+4. YEARS WITH LOW COVERAGE (<50%)
+--------------------------------------------------
+
+ndgain_score:
+  All years have >=50% coverage
+
+gdp_per_capita:
+  All years have >=50% coverage
+
+hdi:
+  All years have >=50% coverage
+
+inform_risk:
+  Years with <50% coverage: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+  Coverage in those years: ['0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%', '0%']
+
+disaster_count:
+  Years with <50% coverage: [2000, 2001, 2002, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023]
+  Coverage in those years: ['25%', '32%', '45%', '46%', '47%', '33%', '36%', '33%', '34%', '32%', '34%', '34%', '36%', '34%', '43%', '41%', '40%', '42%', '46%', '49%', '42%', '41%']
+
+
+5. MISSING VALUE SUMMARY
+--------------------------------------------------
+
+Variables by missing %:
+  humanitarian_funding_usd: 96.2% missing
+  literacy_rate: 81.4% missing
+  desinventar_affected: 73.2% missing
+  desinventar_events: 73.2% missing
+  desinventar_houses_destroyed: 73.2% missing
+  desinventar_deaths: 73.2% missing
+  inform_coping_capacity: 67.2% missing
+  inform_risk: 67.2% missing
+  inform_hazard: 67.2% missing
+  inform_vulnerability: 67.2% missing
+  gini_index: 61.1% missing
+  avg_alert_score: 60.5% missing
+  disaster_displaced: 60.5% missing
+  disaster_deaths: 60.5% missing
+  red_alerts: 60.5% missing
+  disaster_count: 60.5% missing
+  hospital_beds_per_1k: 36.0% missing
+  ntl_radiance: 11.2% missing
+  wgi_gov_effectiveness: 7.8% missing
+  wgi_regulatory_quality: 7.8% missing
+  wgi_control_corruption: 7.6% missing
+  wgi_political_stability: 6.7% missing
+  wgi_rule_of_law: 6.2% missing
+  wgi_voice_accountability: 6.2% missing
+  health_expenditure_pct_gdp: 6.0% missing
+  internet_users_pct: 4.0% missing
+  hdi: 3.9% missing
+  inflation_rate: 3.1% missing
+  gdp_per_capita_imf: 2.7% missing
+  population_imf: 2.7% missing
+  ndgain_score: 2.6% missing
+  ndgain_vulnerability: 2.6% missing
+  gdp_growth_imf: 2.6% missing
+  gdp_per_capita: 2.2% missing
+  gdp_growth: 1.7% missing
+  ndgain_readiness: 0.0% missing
+  population: 0.0% missing
+  life_expectancy: 0.0% missing
+
+
+6. DATA QUALITY FLAGS
+--------------------------------------------------
+OK: No duplicate (iso3, year) combinations
+OK: All ISO3 codes are standard
+OK: All expected years (2000-2023) present
