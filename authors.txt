@@ -1,0 +1,88 @@
+================================================================================
+                    PROJECT CONTRIBUTION STATEMENT
+          Global Disaster Resilience Analytics Platform
+================================================================================
+
+Authors:
+  - M. Abdullah Ali      (23i-2523)  |  i232523@isb.nu.edu.pk
+  - M. Abdullah Aamir    (23i-2538)  |  i232538@isb.nu.edu.pk
+
+================================================================================
+                         TASK DISTRIBUTION
+================================================================================
+
+------------------------------------------------------------------------------
+M. ABDULLAH ALI (23i-2523)
+------------------------------------------------------------------------------
+
+DATA ENGINEERING & ETL PIPELINE:
+  [x] Designed ETL architecture for 13 heterogeneous datasets
+  [x] Implemented Python pipeline (build_unified_dataset.py - 1,753 lines)
+  [x] Developed missing data imputation strategy (forward-fill + interpolation)
+  [x] Created validation framework and diagnostic scripts
+
+FEATURE ENGINEERING:
+  [x] Designed Disaster Impact Index (DII) formula with log-scaling
+  [x] Designed Resilience Recovery Score (RRS) normalization approach
+  [x] Designed Composite Resilience Index (CRI) weighting scheme
+  [x] Implemented all derived indices in Python
+
+REPORT - TECHNICAL SECTIONS:
+  [x] Section 2: Data Sources and Preprocessing (ETL details)
+  [x] Section 3: Model Formulation (index derivation, equations)
+  [x] Appendix A: Dataset Documentation (schema, coverage)
+  [x] Appendix D: Validation and Reproducibility
+
+------------------------------------------------------------------------------
+M. ABDULLAH AAMIR (23i-2538)
+------------------------------------------------------------------------------
+
+TABLEAU DASHBOARD DEVELOPMENT:
+  [x] Built 5-view interactive dashboard in Tableau
+  [x] Implemented LOD expressions for cross-scale analysis
+  [x] Created Set Actions for country drill-down interactivity
+  [x] Designed radar chart using polar coordinate calculations
+  [x] Configured filters, parameters, and dashboard layout
+
+DATA COLLECTION & PREPARATION:
+  [x] Sourced and downloaded all 13 datasets from official portals
+  [x] Organized folder structure (Data/, subfolders per source)
+  [x] Documented data provenance and access dates
+  [x] Verified country code standardization (ISO 3166-1 alpha-3)
+
+REPORT - ANALYTICAL SECTIONS:
+  [x] Section 1: Introduction (problem statement, objectives)
+  [x] Section 4: Visualization Design and Implementation
+  [x] Section 5: Results - Comparative Analysis (findings)
+  [x] Section 6: Discussion (paradoxes, policy implications)
+  [x] Section 7: Conclusion and Future Work
+  [x] Appendix B: Infrastructure Exposure Analysis
+  [x] Appendix C: Disaster Type Analysis
+
+================================================================================
+                         WORK DISTRIBUTION SUMMARY
+================================================================================
+
+Component                          | Abdullah Ali | Abdullah Aamir
+-----------------------------------|--------------|----------------
+ETL Pipeline Development           |     100%     |       0%
+Feature Engineering (Indices)      |     100%     |       0%
+Data Collection & Organization     |       0%     |     100%
+Tableau Dashboard (5 views)        |       0%     |     100%
+Report - Technical Writing         |      50%     |      50%
+Validation & Quality Assurance     |      60%     |      40%
+-----------------------------------|--------------|----------------
+OVERALL CONTRIBUTION               |      50%     |      50%
+
+================================================================================
+                              SIGNATURES
+================================================================================
+
+We confirm that the above represents an accurate description of our 
+individual contributions to this project.
+
+M. Abdullah Ali
+
+M. Abdullah Aamir
+
+================================================================================
