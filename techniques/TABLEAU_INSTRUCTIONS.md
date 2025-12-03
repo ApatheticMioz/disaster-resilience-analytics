@@ -412,10 +412,20 @@ The entry point. Geographic overview. "Where does resilience live?"
 ```
 Palette: Red-Yellow-Green Diverging
 Start: 0 (Red = lowest resilience)
-Center: 0.5 (Yellow = median)
-End: 1 (Green = highest resilience)
-Stepped Color: No (continuous)
+Center: 7-10 (Yellow = actual median is ~7.1)
+End: 100 (Green = highest resilience)
+Stepped Color: Yes (recommended due to skewed distribution)
+
+Alternative: Quartile-based stepped colors
+  0-5:    Dark Red     (bottom quartile)
+  5-10:   Orange       (below median)
+  10-20:  Yellow       (above median)  
+  20-50:  Light Green  (high resilience)
+  50-100: Dark Green   (exceptional)
 ```
+
+**Note:** All `_normalized` indices are scaled 0-100, NOT 0-1.
+The CRI distribution is heavily right-skewed (median ~7, mean ~9).
 
 ### Tooltip Template
 ```
@@ -838,14 +848,14 @@ Use these EXACT colors across all sheets:
 | `year` | Integer | 2000-2023 |
 
 ## Core Indices (Your Creations)
-| Column | Type | Coverage | Description |
-|--------|------|----------|-------------|
-| `DII` | Float | 99.4% | Disaster Impact Index (raw) |
-| `DII_normalized` | Float | 99.4% | DII scaled 0-1 |
-| `RRS` | Float | 100% | Resilience Recovery Score (raw) |
-| `RRS_normalized` | Float | 100% | RRS scaled 0-1 |
-| `CRI` | Float | 100% | Composite Resilience Index (raw) |
-| `CRI_normalized` | Float | 100% | CRI scaled 0-1 |
+| Column | Type | Coverage | Range | Description |
+|--------|------|----------|-------|-------------|
+| `DII` | Float | 99.4% | varies | Disaster Impact Index (raw) |
+| `DII_normalized` | Float | 99.4% | 0-100 | DII scaled 0-100 |
+| `RRS` | Float | 100% | varies | Resilience Recovery Score (raw) |
+| `RRS_normalized` | Float | 100% | 0-100 | RRS scaled 0-100 |
+| `CRI` | Float | 100% | varies | Composite Resilience Index (raw) |
+| `CRI_normalized` | Float | 100% | 0-100 | CRI scaled 0-100 (median ~7, mean ~9, right-skewed) |
 
 ## Disaster Metrics (from EM-DAT, GDACS, DesInventar)
 | Column | Coverage | Use For |
