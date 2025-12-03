@@ -1,0 +1,32 @@
+# Submission folder and zip
+i232523_i232538_DS-A_DAV_Project/
+i232523_i232538_DS-A_DAV_Project.zip
+
+# Tableau recovery files
+~Book2__*.twbr
+*.twbr
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Temp files
+temp/
+*.tmp
+
+# LaTeX auxiliary files
+report/*.aux
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.synctex.gz
+report/*.toc
+report/*.bbl
+report/*.blg
+
+# OS files
+.DS_Store
+Thumbs.db
