@@ -42,7 +42,7 @@ i232538@isb.nu.edu.pk}
 \maketitle
 
 \begin{abstract}
-In an era of escalating climate volatility, traditional economic metrics like GDP fail to capture a nation's true capacity to absorb and recover from systemic shocks. This project presents the \textit{Global Disaster Resilience Analytics Platform}, a comprehensive analytical system commissioned by the Global Disaster and Humanitarian Response Agency (GDHRA). We fuse 13 heterogeneous open datasets---including EM-DAT, World Bank WDI, Worldwide Governance Indicators (WGI), ND-GAIN, and INFORM Risk---into a unified analytical framework spanning 2000--2023 across 192 nations (4,608 country-year records with 102 features). We engineer three novel composite indices following the project's conceptual models: the Disaster Impact Index (DII), Resilience Recovery Score (RRS), and Composite Resilience Index (CRI). Our analysis reveals the ``Resilience Paradox'': governance quality ($r = 0.71$) outperforms GDP per capita ($r = 0.67$) as a predictor of national resilience. The interactive Tableau dashboard enables multi-scalar exploration across time, geography, disaster types, and socio-economic groups through five coordinated analytical views utilizing advanced LOD expressions, Set Actions, and custom polar geometry.
+In an era of escalating climate volatility, traditional economic metrics like GDP fail to capture a nation's true capacity to absorb and recover from systemic shocks. This project presents the \textit{Global Disaster Resilience Analytics Platform}, a comprehensive analytical system commissioned by the Global Disaster and Humanitarian Response Agency (GDHRA). We fuse 13 heterogeneous open datasets---including EM-DAT, World Bank WDI, Worldwide Governance Indicators (WGI), ND-GAIN, and INFORM Risk---into a unified analytical framework spanning 2000--2023 across 191 nations (4,584 country-year records with 102 features). We engineer three novel composite indices following the project's conceptual models: the Disaster Impact Index (DII), Resilience Recovery Score (RRS), and Composite Resilience Index (CRI). Our analysis reveals the ``Resilience Paradox'': governance quality ($r = 0.78$) outperforms GDP per capita ($r = 0.66$) as a predictor of national resilience. The interactive Tableau dashboard enables multi-scalar exploration across time, geography, disaster types, and socio-economic groups through five coordinated analytical views utilizing advanced LOD expressions, Set Actions, and custom polar geometry.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -90,14 +90,14 @@ IMF WEO \cite{b7} & GDP growth, inflation & 97.3\% & 2000--23 \\
 INFORM \cite{b8} & Hazard, coping capacity & 32.8\% & 2016--23 \\
 NTL \cite{b9} & Nighttime radiance & 88.8\% & 1992--24 \\
 FTS/OCHA \cite{b10} & Humanitarian funding & Variable & 2000--23 \\
-DesInventar \cite{b11} & Sub-national losses & 27.2\% & Various \\
+DesInventar \cite{b11} & Sub-national losses & 27.4\% & Various \\
 Barro-Lee \cite{b12} & Educational attainment & 5.6\% & 5-year \\
-WID \cite{b13} & Gini coefficient & 38.9\% & Variable \\
+WID \cite{b13} & Gini coefficient & 36.7\% & Variable \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The final unified dataset contains \textbf{4,608 rows} (192 countries $\times$ 24 years) and \textbf{102 columns}, structured with the composite primary key \texttt{(iso3, year)}. Table~\ref{tab:sample} shows the sample data structure.
+The final unified dataset contains \textbf{4,584 rows} (191 countries $\times$ 24 years) and \textbf{102 columns}, structured with the composite primary key \texttt{(iso3, year)}.\footnote{Israel was forcibly removed from the dataset.} Table~\ref{tab:sample} shows the sample data structure.
 
 \begin{table}[htbp]
 \caption{Sample Data Structure (5 of 102 columns)}
@@ -234,7 +234,7 @@ The coefficient 4 in DII for affected population follows UNDRR Global Assessment
 Each visualization type was selected for specific analytical intent aligned with R4/R5 requirements:
 
 \begin{itemize}
-    \item \textbf{Choropleth Map}: Geographic patterns require spatial encoding; diverging color gradient (red-yellow-green) maps directly to CRI quintiles for immediate pattern recognition across 192 countries
+    \item \textbf{Choropleth Map}: Geographic patterns require spatial encoding; diverging color gradient (red-yellow-green) maps directly to CRI quintiles for immediate pattern recognition across 191 countries
     \item \textbf{Quadrant Scatter Plot}: The 2D mapping of DII (x-axis) vs. RRS (y-axis) operationalizes the Exposure-Vulnerability-Capacity framework into actionable strategic quadrants
     \item \textbf{Dual-Line Time Series}: The ``gap'' between readiness and vulnerability lines visually encodes the safety margin---this \textit{area} represents adaptation progress
     \item \textbf{Governance-Wealth Scatter}: Separate trend lines per governance tier reveal the ``governance premium'' at equivalent wealth levels
@@ -302,29 +302,29 @@ Table~\ref{tab:correlations} presents the correlation analysis supporting our ce
 \toprule
 \textbf{Variable Pair} & \textbf{Pearson $r$} & \textbf{$r^2$} \\
 \midrule
-CRI vs. WGI Composite & \textbf{0.714} & 0.510 \\
-CRI vs. HDI & 0.672 & 0.452 \\
-CRI vs. GDP per capita & 0.673 & 0.453 \\
-CRI vs. Log(GDP) & 0.687 & 0.472 \\
-RRS vs. WGI Composite & 0.712 & 0.507 \\
-RRS vs. GDP per capita & 0.595 & 0.354 \\
+CRI vs. WGI Composite & \textbf{0.776} & 0.601 \\
+CRI vs. HDI & 0.671 & 0.450 \\
+CRI vs. GDP per capita & 0.657 & 0.432 \\
+CRI vs. Log(GDP) & 0.725 & 0.526 \\
+RRS vs. WGI Composite & 0.711 & 0.506 \\
+RRS vs. GDP per capita & 0.592 & 0.350 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Key Finding}: Governance (WGI) explains 51\% of CRI variance ($r^2 = 0.51$), compared to 45\% for GDP ($r^2 = 0.45$). The gap widens for RRS: governance explains 51\% vs. only 35\% for GDP.
+\textbf{Key Finding}: Governance (WGI) explains 60\% of CRI variance ($r^2 = 0.60$), compared to 43\% for GDP ($r^2 = 0.43$). The gap widens for RRS: governance explains 51\% vs. only 35\% for GDP.
 
 \subsection{Regional Comparison (Geographic)}
 \begin{itemize}
     \item \textbf{Europe}: Mean CRI = 16.5, positive readiness-vulnerability gap
     \item \textbf{Oceania}: Mean CRI = 9.5, moderate resilience
     \item \textbf{Americas}: Mean CRI = 8.7, high variance between North and South
-    \item \textbf{Asia}: Mean CRI = 8.1, diverse range from Japan to Yemen
+    \item \textbf{Asia}: Mean CRI = 8.0, diverse range from Japan to Yemen
     \item \textbf{Africa}: Mean CRI = 4.9, lowest regional average
 \end{itemize}
 
 \subsection{Temporal Evolution (Time)}
-The CRI calculation incorporates INFORM data (available from 2016), which affects the absolute scale. Comparing within consistent methodology periods: pre-2016 mean CRI improved from 7.23 (2000) to 8.18 (2015), representing 13.1\% growth. Table~\ref{tab:temporal} shows regional trajectory divergence in the readiness-vulnerability gap.
+The CRI calculation incorporates INFORM data (available from 2016), which affects the absolute scale. Comparing within consistent methodology periods: pre-2016 mean CRI improved from 7.19 (2000) to 8.15 (2015), representing 13.3\% growth. Table~\ref{tab:temporal} shows regional trajectory divergence in the readiness-vulnerability gap.
 
 \begin{table}[htbp]
 \caption{Regional Readiness-Vulnerability Gap Evolution}
@@ -337,7 +337,7 @@ The CRI calculation incorporates INFORM data (available from 2016), which affect
 Europe & +0.147 & +0.219 & $\uparrow$ Widening \\
 Oceania & $-$0.140 & $-$0.069 & $\uparrow$ Closing \\
 Americas & $-$0.069 & $-$0.042 & $\uparrow$ Closing \\
-Asia & $-$0.108 & $-$0.029 & $\uparrow$ Closing \\
+Asia & $-$0.115 & $-$0.034 & $\uparrow$ Closing \\
 Africa & $-$0.245 & $-$0.223 & $\rightarrow$ Stagnant \\
 \bottomrule
 \end{tabular}
@@ -347,12 +347,12 @@ Africa & $-$0.245 & $-$0.223 & $\rightarrow$ Stagnant \\
 Governance tier analysis reveals the ``governance premium'':
 \begin{itemize}
     \item \textbf{Excellent} (WGI $\geq 1.0$): Mean CRI = 20.9, n=654
-    \item \textbf{Good} ($0 \leq$ WGI $< 1.0$): Mean CRI = 11.8, n=1,201
+    \item \textbf{Good} ($0 \leq$ WGI $< 1.0$): Mean CRI = 11.7, n=1,178
     \item \textbf{Weak} ($-0.5 \leq$ WGI $< 0$): Mean CRI = 6.9, n=971
     \item \textbf{Failed} (WGI $< -0.5$): Mean CRI = 4.4, n=1,498
 \end{itemize}
 
-When controlling for GDP by examining the High GDP quintile, ``Excellent'' governance countries (CRI = 14.1) still outperform ``Failed'' governance (CRI = 6.3) by 124\%---validating the governance premium hypothesis even among wealthy nations.
+When controlling for GDP by examining the High GDP quintile, ``Excellent'' governance countries (CRI = 21.5) still outperform ``Weak'' governance (CRI = 9.9) by 118\%---validating the governance premium hypothesis even among wealthy nations.
 
 \subsection{Disaster Type Analysis}
 As required by R4, we analyzed resilience patterns across disaster types using GDACS event classifications. Table~\ref{tab:disaster_types} summarizes event counts from the GDACS Clean dataset.
@@ -366,23 +366,23 @@ As required by R4, we analyzed resilience patterns across disaster types using G
 \toprule
 \textbf{Disaster Type} & \textbf{Events} & \textbf{Characteristics} \\
 \midrule
-Earthquake & 20,290 & High intensity, localized \\
-Wildfire & 3,051 & Seasonal, infrastructure damage \\
-Flood & 2,126 & Most frequent, widespread \\
-Tropical Cyclone & 405 & Severe, coastal regions \\
-Drought & 240 & Slow-onset, prolonged recovery \\
+Earthquake & 16,155 & High intensity, localized \\
+Forest Fire & 2,137 & Seasonal, infrastructure damage \\
+Flood & 1,383 & Widespread, recurring annually \\
+Drought & 198 & Slow-onset, prolonged recovery \\
+Tropical Cyclone & 196 & Severe, coastal regions \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Key Finding}: While earthquakes dominate event counts in GDACS (20,290 alerts), the integrated DII and RRS calculations aggregate impacts at the country-year level. Drought-affected countries typically exhibit lower median RRS values, as slow-onset disasters strain recovery capacity more severely despite generating fewer alert-level events.
+\textbf{Key Finding}: While earthquakes dominate event counts in GDACS (16,155 alerts), the integrated DII and RRS calculations aggregate impacts at the country-year level. Drought-affected countries typically exhibit lower median RRS values, as slow-onset disasters strain recovery capacity more severely despite generating fewer alert-level events.
 
 \section{Analytical Storytelling (R5)}
 
 The dashboard translates analytical findings into actionable intelligence through coordinated visual narratives. Following the project's emphasis on ``analytical storytelling,'' we structured the dashboard around three key questions posed by GDHRA:
 
 \textbf{Q1: Which nations show high exposure but low vulnerability?}
-Japan, Chile, and New Zealand fall in the ``Fighters'' quadrant---high DII, high RRS. Japan experienced 150+ disasters yet maintains CRI = 14.9 through institutional resilience (Fig.~\\ref{fig:quadrant}). New Zealand achieves CRI = 29.3 despite high seismic exposure.
+Japan, Chile, and New Zealand fall in the ``Fighters'' quadrant---high DII, high RRS. Japan experienced 194 disasters yet maintains CRI = 14.9 through institutional resilience (Fig.~\ref{fig:quadrant}). New Zealand achieves CRI = 29.3 despite high seismic exposure.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=\columnwidth]{figures/quadrant_matrix.png}}
@@ -408,14 +408,14 @@ The temporal view (Fig.~\ref{fig:governance_scatter}) reveals Europe widening it
 \begin{enumerate}
     \item \textbf{Index Sensitivity}: Derived indices are sensitive to component weightings. For example, the DII uses a coefficient of 4 for affected population based on UNDRR literature \cite{b14}, but alternative weights (2--6) would shift country rankings. Sensitivity analysis showed top-quartile membership remains 78\% stable across weight variations.
     \item \textbf{Temporal Granularity}: Annual aggregation masks within-year recovery dynamics. Disasters occurring in December may show recovery effects only in subsequent year data, introducing measurement lag.
-    \item \textbf{Causality}: Correlational analysis cannot establish causal direction. While governance correlates with resilience ($r = 0.71$), reverse causality---resilient institutions enabling good governance---cannot be ruled out without instrumental variable approaches.
+    \item \textbf{Causality}: Correlational analysis cannot establish causal direction. While governance correlates with resilience ($r = 0.78$), reverse causality---resilient institutions enabling good governance---cannot be ruled out without instrumental variable approaches.
     \item \textbf{Ecological Fallacy}: Country-level aggregation may mask sub-national variation. Within-country inequality in resilience (e.g., urban vs. rural) is not captured.
 \end{enumerate}
 
 \subsection{Data Limitations}
 \begin{enumerate}
     \item \textbf{African Sparsity}: 18--19\% missing data for African nations 2000--2005
-    \item \textbf{Gini Coverage}: Only 38.9\% coverage limits inequality analysis
+    \item \textbf{Gini Coverage}: Only 36.7\% coverage limits inequality analysis
     \item \textbf{INFORM Recency}: Data begins 2016, restricting historical hazard analysis
 \end{enumerate}
 
@@ -429,9 +429,9 @@ The temporal view (Fig.~\ref{fig:governance_scatter}) reveals Europe widening it
 \end{enumerate}
 
 \section{Conclusion}
-The Global Disaster Resilience Analytics Platform demonstrates that national resilience is fundamentally a function of governance, not merely economic wealth. By fusing 13 datasets into 4,608 country-year records with 102 features, and engineering three composite indices following the project's mathematical frameworks, we quantify the ``Resilience Paradox'': governance quality ($r = 0.71$) consistently outperforms GDP ($r = 0.67$) as a resilience predictor.
+The Global Disaster Resilience Analytics Platform demonstrates that national resilience is fundamentally a function of governance, not merely economic wealth. By fusing 13 datasets into 4,584 country-year records with 102 features, and engineering three composite indices following the project's mathematical frameworks, we quantify the ``Resilience Paradox'': governance quality ($r = 0.78$) consistently outperforms GDP ($r = 0.66$) as a resilience predictor.
 
-The interactive Tableau dashboard operationalizes these findings through coordinated views enabling exploration across time (2000--2023), geography (5 regions, 192 countries), disaster exposure levels, and socio-economic groups (governance tiers). Nations like Cabo Verde and Bhutan demonstrate that well-governed societies punch above their economic weight, while resource-rich nations with governance deficits remain structurally fragile.
+The interactive Tableau dashboard operationalizes these findings through coordinated views enabling exploration across time (2000--2023), geography (5 regions, 191 countries), disaster exposure levels, and socio-economic groups (governance tiers). Nations like Cabo Verde and Bhutan demonstrate that well-governed societies punch above their economic weight, while resource-rich nations with governance deficits remain structurally fragile.
 
 \appendix
 
@@ -475,10 +475,10 @@ Per project deliverable requirements, Table~\ref{tab:dataset_doc} provides the D
 \midrule
 Dataset Name & unified\_resilience\_dataset.csv \\
 Primary Key & (iso3, year) \\
-Row Count & 4,608 (192 countries $\times$ 24 years) \\
+Row Count & 4,584 (191 countries $\times$ 24 years) \\
 Column Count & 102 \\
 Year Range & 2000--2023 \\
-Geographic Scope & 192 UN member states \\
+Geographic Scope & 191 UN member states \\
 Derived Indices & DII, RRS, CRI (normalized 0--100) \\
 Missing Strategy & Within-country linear interpolation \\
 \bottomrule
