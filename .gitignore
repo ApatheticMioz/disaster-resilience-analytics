@@ -1,22 +1,83 @@
+# =============================================================================
+# Disaster Resilience Analytics - .gitignore
+# =============================================================================
+
 # Submission folder and zip
 i232523_i232538_DS-A_DAV_Project/
 i232523_i232538_DS-A_DAV_Project.zip
 
-# Tableau recovery files
+# =============================================================================
+# Tableau
+# =============================================================================
+# Recovery files
 ~Book2__*.twbr
 *.twbr
 
+# =============================================================================
 # Python
+# =============================================================================
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
 .venv/
 venv/
+env/
+ENV/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
+# PyInstaller
+*.manifest
+*.spec
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# =============================================================================
 # Temp files
+# =============================================================================
 temp/
 *.tmp
+*.temp
+*.swp
+*~
 
+# =============================================================================
 # LaTeX auxiliary files
+# =============================================================================
 report/*.aux
 report/*.fdb_latexmk
 report/*.fls
@@ -26,7 +87,58 @@ report/*.synctex.gz
 report/*.toc
 report/*.bbl
 report/*.blg
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
 
+# =============================================================================
 # OS files
+# =============================================================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# =============================================================================
+# IDE and Editor
+# =============================================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# Compiled binaries
+# =============================================================================
+*.exe
+*.o
+# *.out already covered in LaTeX section
+*.dll
+*.dylib
+*.class
+
+# =============================================================================
+# Archives (excluding data archives in Data/ folder)
+# =============================================================================
+# Note: Data/*.zip files are intentionally tracked via Git LFS
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# =============================================================================
+# Logs
+# =============================================================================
+*.log
+logs/
